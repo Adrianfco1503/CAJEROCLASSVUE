@@ -22,7 +22,7 @@ export default {
         let self = this
         axios.get("https://cajeroapiclase.herokuapp.com/user/balance/" + this.username)
             .then((result) => {
-                self.balance = result.data.balance
+                self.username.balance = result.data.balance
             })
             .catch((error) => {
                 alert("ERROR Servidor");
