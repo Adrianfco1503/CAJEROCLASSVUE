@@ -1,7 +1,7 @@
 <template>
     <div id="UserBalance">
         <h2>{{username}}</h2>
-        <h2>Tu saldo es: <span>  {{balance}} COP </span> </h2>
+        <h2>Tu saldo es: <span>  {{username.balance}} COP </span> </h2>
     </div>
 </template>
 
@@ -18,6 +18,7 @@ export default {
 
     created: function(){
         this.username = this.$route.params.username
+        this.balance=this.$route.params.balance
         
         let self = this
         axios.get("https://cajeroapiclase.herokuapp.com/user/balance/" + this.username)
