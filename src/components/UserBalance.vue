@@ -1,7 +1,7 @@
 <template>
     <div id="UserBalance">
         <h2>{{username}}</h2>
-        <h2>Tu saldo es: <span>  {{username.balance}} COP </span> </h2>
+        <h2>Tu saldo es: <span>  {{balance}} COP </span> </h2>
     </div>
 </template>
 
@@ -12,7 +12,7 @@ export default {
     data: function (){
         return {
             username: "",
-            balance: ""
+            balance: 0
         }
     },
 
